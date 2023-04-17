@@ -4,7 +4,7 @@ public class HotDrinks extends Product{
          private int volume;
         private int temper;
         private boolean sugar;
-        private String a; 
+        
     
     
         public HotDrinks(String name, Double price, int volume, int temper, boolean sugar) {
@@ -39,13 +39,16 @@ public class HotDrinks extends Product{
     {
         return sugar;
     }
+
+
     public void setSugar( boolean sugar)
     {
          this.sugar = sugar;
        
     }
 
-    /**
+    
+   /**
     * переопределение вывода продукта
     */
     @Override
@@ -53,9 +56,7 @@ public class HotDrinks extends Product{
     {
         return "Product{" + "name=" + super.getName() +
         ", price=" + super.getPrice() + ", volume="+ volume +
-        ", temper=" +temper +", "+ a +"}";
-        
-
+        ", temper=" +temper +", "+ sugar +"}";
     }
-   }
+}
 

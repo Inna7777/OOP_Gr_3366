@@ -43,6 +43,8 @@ public class VendingMachine {
         }
         return null;
     }
+
+    
      public List<Product> getProdAll()
      {
         return products;
