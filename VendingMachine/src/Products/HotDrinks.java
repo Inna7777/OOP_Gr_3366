@@ -54,9 +54,16 @@ public class HotDrinks extends Product{
     @Override
     public String toString()
     {
+         if( sugar == true)
+         {
         return "Product{" + "name=" + super.getName() +
         ", price=" + super.getPrice() + ", volume="+ volume +
-        ", temper=" +temper +", "+ sugar +"}";
+        ", temper=" +temper +", "+ "with sugar"+"}";
     }
+    else
+    return "Product{" + "name=" + super.getName() +
+        ", price=" + super.getPrice() + ", volume="+ volume +
+        ", temper=" +temper +", "+ "without sugar"+"}";
+}
 }
 
