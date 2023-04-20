@@ -1,7 +1,9 @@
 package Interfaces;
 
 import Classes.Actor;
-
+/**
+ * интерфейс поведения абстрактного клиента в магазине
+ */
 public interface iActorBehaviour {
     void setMakeOrder(boolean makeOrder); //сделать заказ
     void setTakeOrder(boolean takeOrder); //забрать заказ

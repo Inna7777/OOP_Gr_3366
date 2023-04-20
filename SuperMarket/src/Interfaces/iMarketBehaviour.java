@@ -5,7 +5,7 @@ import java.util.List;
 import Classes.Actor;
 
 /**
- * интерфейс для создания общих методов
+ * интерфейс для создания общих методов посещения магазина
  */
 public interface iMarketBehaviour {
     void acceptToMarket(iActorBehaviour actor);//пришел в магазин
