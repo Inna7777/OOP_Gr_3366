@@ -116,15 +116,26 @@ public void returnPurche(iActorBehaviour actor) {
         }
     }
     
-
+@Override
+public void leaveShop(iActorBehaviour actor) {
+    if (actor.isReturnOrder())
+    {
+        System.out.println(actor.getActor().getName()+" клиент  покинул магазин"); 
+    }
+}
+    
 
 @Override
 public void updateReturn(iActorBehaviour actor) {
     returnToMarket(actor);
     returnPurche(actor);
+    leaveShop(actor);
+
+}
+
 
 }
 
    
     
-}
+
