@@ -1,9 +1,8 @@
 package Interfaces;
 
 public interface iReturnBehaviour {
-    void returnToMarket(iActorBehaviour actor);
-    void returnPurche();
-    void updateReturn(); 
-
-    
+    void returnToMarket(iActorBehaviour actor);//возвращается в магазин
+    void returnPurche();//возвращает товар
+    void updateReturn(); //объединяет методы поведения при возврате товара
+   
 }

@@ -8,7 +8,7 @@ import Classes.Actor;
  * интерфейс для создания общих методов
  */
 public interface iMarketBehaviour {
-    void acceptToMarket(iActorBehaviour actor);
-    void releaseFromMatket(List<Actor> actors);
-    void update();
+    void acceptToMarket(iActorBehaviour actor);//пришел в магазин
+    void releaseFromMatket(List<Actor> actors);// ушел из магазина
+    void update();//действия в магазине
 }
