@@ -20,7 +20,9 @@ public class PromotClient extends Actor{
         this.nameShare =nameShare;
 
     }
-
+    /** 
+     * методы из интерфейса aбстрактного класса
+     */
     @Override
     public String getName() {
         return super.name;
@@ -61,7 +63,9 @@ public class PromotClient extends Actor{
     public void setTakeOrder(boolean takeOrder) {
         super.isTakeOrder = takeOrder; 
     }
-
+    /**
+    *  методы из интерфейса iReturnBehaviour возврата товара 
+    */
     @Override
     public void setReturnOrder(boolean returnOrder) {
        super.isReturnOrder = returnOrder;

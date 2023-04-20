@@ -41,6 +41,9 @@ public void setTakeOrder(boolean takeOrder) {
 public Actor getActor() {
       return this;
 }
+/**
+ * * методы из интерфейса iReturnBehaviour возврата товара 
+ */
 
 @Override
 public void setReturnOrder(boolean returnOrder) {

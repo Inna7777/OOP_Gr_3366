@@ -1,11 +1,11 @@
 package Classes;
 /**
- * Класс Vip клиент
+ * Класс Vip клиент подключаем к абстрактному классу Actor
  */
 public class SpecialClient extends Actor{   
      private int idVIP;
      /**
-      * Конструктор класса Vipклиента
+      * Конструктор класса Vipклиента c полями имя и id-карта
       * @param name
       * @param idVIP
       */    
@@ -13,16 +13,24 @@ public class SpecialClient extends Actor{
      super(name);  
      this.idVIP = idVIP;
     }  
-
+    /**
+     * переопределен метода из абстрактного класса
+     */
     @Override 
      public String getName() {  
         return super.name;   
     }    
-
+    /**
+     * создаем метод возврата idVip
+     * @return
+     */
      public int getIdVIP() {   
          return idVIP;  
     }
-
+    /**
+     * переопределен методы из абстрактного класса
+     */
+     
     @Override
     public boolean isMakeOrder() {
         return super.isMakeOrder;
@@ -48,6 +56,10 @@ public class SpecialClient extends Actor{
     public Actor getActor() {
         return this;
     }
+
+    /**
+     * переопределен метода из интерфейса возврата товара
+     */
     @Override
     public void setReturnOrder(boolean returnOrder) {
        super.isReturnOrder = returnOrder;

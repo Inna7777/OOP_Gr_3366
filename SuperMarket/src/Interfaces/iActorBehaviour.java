@@ -6,7 +6,10 @@ public interface iActorBehaviour {
     void setMakeOrder(boolean makeOrder); //сделать заказ
     void setTakeOrder(boolean takeOrder); //забрать заказ
     void setReturnOrder(boolean returnOrder); //возвратить товар
-    boolean isMakeOrder();
+    /**
+     * проверка действий клиента
+     */
+    boolean isMakeOrder(); 
     boolean isTakeOrder();
     boolean isReturnOrder();
     Actor getActor();

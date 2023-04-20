@@ -54,9 +54,9 @@ public class Market implements iMarketBehaviour, iQueueBehaviour, iReturnBehavio
      */
     @Override
     public void update() {
-        takeOrder();
-        giveOrder();
-        releaseFromQueue();        
+        takeOrder();//вызываем метод -сделал заказ
+        giveOrder();//вызываем метод -забрал заказ
+        releaseFromQueue();  // метод ухода из магазина      
     }
 
     @Override
@@ -88,50 +88,52 @@ public class Market implements iMarketBehaviour, iQueueBehaviour, iReturnBehavio
 
 
 
-@Override
-public void takeOrder() {
-    for(iActorBehaviour actor:queue)
-    {
-        if(!actor.isMakeOrder())
-        {
-            actor.setMakeOrder(true);
-            System.out.println(actor.getActor().getName()+ "клиент сделал свой заказ");
-        }
-    }
-}
-/**
- * подключение методов из интерфейса iReturnBehaviour (поведение при возврате товара)
- * @param actor
- */
-@Override
-public void returnToMarket(iActorBehaviour actor) {
-    System.out.println(actor.getActor().getName()+ "клиент вернулся в  магазин");
-    takeInQueue(actor);
-    }
     @Override
-public void returnPurche(iActorBehaviour actor) {
-       if(!actor.isReturnOrder()){
-        actor.setReturnOrder(true);
-        System.out.println(actor.getActor().getName()+" клиент вернул товар");
+    public void takeOrder() {
+        for(iActorBehaviour actor:queue)
+        {
+            if(!actor.isMakeOrder())
+            {
+                actor.setMakeOrder(true);
+                System.out.println(actor.getActor().getName()+ "клиент сделал свой заказ");
+            }
         }
     }
-    
-@Override
-public void leaveShop(iActorBehaviour actor) {
-    if (actor.isReturnOrder())
-    {
-        System.out.println(actor.getActor().getName()+" клиент  покинул магазин"); 
+    /**
+     * подключение методов из интерфейса iReturnBehaviour (поведение при возврате товара)
+     * @param actor
+     */
+    @Override
+    public void returnToMarket(iActorBehaviour actor) {
+        System.out.println(actor.getActor().getName()+ "клиент вернулся в  магазин");
+        takeInQueue(actor);
+        }
+
+    @Override
+    public void returnPurche(iActorBehaviour actor) {
+        if(!actor.isReturnOrder()){
+            actor.setReturnOrder(true);
+            System.out.println(actor.getActor().getName()+" клиент вернул товар");
+            }
+        }
+        
+    @Override
+    public void leaveShop(iActorBehaviour actor) {
+        if (actor.isReturnOrder())
+        {
+            actor.setReturnOrder(true);
+            System.out.println(actor.getActor().getName()+" клиент  покинул магазин"); 
+        }
     }
-}
-    
+        
 
-@Override
-public void updateReturn(iActorBehaviour actor) {
-    returnToMarket(actor);
-    returnPurche(actor);
-    leaveShop(actor);
+    @Override
+    public void updateReturn(iActorBehaviour actor) {
+        returnToMarket(actor);
+        returnPurche(actor);
+        leaveShop(actor);
 
-}
+    }
 
 
 }
