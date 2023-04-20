@@ -8,6 +8,7 @@ public abstract class Actor implements iActorBehaviour {
     protected String name;
     protected boolean isTakeOrder;
     protected boolean isMakeOrder;
+    protected boolean isReturnOrder;
     
 /**
  * Конструктор имени

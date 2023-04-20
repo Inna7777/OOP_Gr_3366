@@ -3,6 +3,7 @@ import Classes.OrdinaryClient;
 import Classes.PromotClient;
 import Classes.SpecialClient;
 import Interfaces.iActorBehaviour;
+import Interfaces.iReturnBehaviour;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -26,5 +27,7 @@ public class App {
         market.acceptToMarket(item3);
         market.acceptToMarket(item4);
         market.update();
+        market.updateReturn(item4);
+        
     }
 }

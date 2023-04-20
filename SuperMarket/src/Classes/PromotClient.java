@@ -61,4 +61,14 @@ public class PromotClient extends Actor{
     public void setTakeOrder(boolean takeOrder) {
         super.isTakeOrder = takeOrder; 
     }
+
+    @Override
+    public void setReturnOrder(boolean returnOrder) {
+       super.isReturnOrder = returnOrder;
+    }
+
+    @Override
+    public boolean isReturnOrder() {
+        return super.isReturnOrder;
+    }
 }
