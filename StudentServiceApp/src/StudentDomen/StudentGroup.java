@@ -36,7 +36,7 @@ public StudentGroup(List<Student> students) {
 	// }
 
     /**
-     * анонимный iterator,  тогда не надо создавать класс StudentGroupIterator
+     * анонимный iterator,  тог не надо создавать класс StudentGroupIterator
      */
 	@Override
 	public Iterator<Student> iterator() {
