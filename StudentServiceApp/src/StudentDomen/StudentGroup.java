@@ -2,16 +2,39 @@ package StudentDomen;
 
 import java.util.Iterator;
 import java.util.List;
-
-public class StudentGroup implements Iterable<Student> {
+/**
+ * класс StudentGroup наследуем от User и подключаем метод сортировки (implements Comparable)
+ */
+public class StudentGroup  implements Iterable<Student> , Comparable<StudentGroup> {
+    private int course;
     private List<Student> students;
+    
     /**
      * конструктор группы студентов
      * @param students
      */
-public StudentGroup(List<Student> students) {
+public StudentGroup(List<Student> students, int course) {
         this.students = students;
+        this.course = course;
     }
+
+    /**
+     * задаем номер курса
+     * @param course
+     */
+    public void setCourse(int course) {
+        this.course = course;
+    }
+
+    /**
+     * возвращаем номер курса
+     * @return
+     */
+    public int getCourse() {
+        return course;
+    }
+
+
     /**
      * метод возврата списка студента
      * @return
@@ -27,6 +50,7 @@ public StudentGroup(List<Student> students) {
         this.students = students;
     }
 
+   
     /**
      * создаем класс итератора  и подключаем его сюда
      */
@@ -35,8 +59,10 @@ public StudentGroup(List<Student> students) {
 	// 	return new  StudentGroupIterator(students);
 	// }
 
+    
+
     /**
-     * анонимный iterator,  тог не надо создавать класс StudentGroupIterator
+     * анонимный iterator,  тогда не надо создавать класс StudentGroupIterator
      */
 	@Override
 	public Iterator<Student> iterator() {
@@ -57,10 +83,26 @@ public StudentGroup(List<Student> students) {
             }
         };
 	}
-	
+
+    @Override
+    public int compareTo(StudentGroup o) {
+        if(this.getCourse() == o.getCourse())
+              {
+                 return 0;
+              }
+              if (this.getCourse() < o.getCourse())
+              {
+                     return -1;
+              }
+              return 1;
+       }
+
+}
+
+    
 
        
 
     
     
-}
+
