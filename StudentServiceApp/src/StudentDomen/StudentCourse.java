@@ -25,6 +25,8 @@ public List<StudentGroup> getCourses() {
 public void setCourses(List<StudentGroup> courses) {
 	this.courses = courses;
 }
+
+
 @Override
 public Iterator<StudentGroup> iterator() {
 	return new Iterator<StudentGroup>() {

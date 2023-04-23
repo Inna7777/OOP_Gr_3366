@@ -11,15 +11,15 @@ public class App {
 
     	public static void main(String[] args) throws Exception {
         // User u1 =new User("Boris", "Borisov", 25);
-        Student s1 = new Student("Sergey","Ivanov", 24, 180);
-        Student s2 = new Student("Michail","Petrov", 25, 111);
-        Student s3 = new Student("Dasha","Rideeva", 41, 123);
+        Student s1 = new Student("Sergey","Ivanov", 41, 180);
+        Student s2 = new Student("Michail","Petrov", 24, 111);
+        Student s3 = new Student("Dasha","Rideeva", 24, 123);
         Student s4 = new Student("Sergey","Semenov", 24, 234);
-        Student s5 = new Student("Michail","Petrov", 25, 151);
+        Student s5 = new Student("Michail","Petrov", 24, 151);
         Student s6 = new Student("Lena","Medvedeva",25, 723);
         Student s7 = new Student("Petr","Semenov", 28, 634);
         /**
-         * добавляем студентов в список
+         * добавляем студентов в списки групп
          */
         
         List<Student> listStud1 = new ArrayList<Student>();
@@ -46,37 +46,37 @@ public class App {
         for (StudentGroup group : course) {
             
             System.out.println("Course:" + namber++ );
+            Collections.sort(group.getStudents());
             for (Student student : group.getStudents()) {
-                System.out.println(student.getFirstName() + " "
-                 + student.getSecondName()+ " "+student.getAge()+" "+ student.getStudentId());
+                                               
+                System.out.println(student);
+                
             }
         }
+        }
+    }
+        
     
+    
+        // System.out.println("+++++++++++++++++ после сортировки ++++++++++++++++++++++++");
+        
+        // StudentGroup group = new StudentGroup(listStud1);
+        // for(Student stud: group)
+        //         {
+        //             System.out.println(stud);
+        //         }
+        //         System.out.println("+++++++++++++++++ после сортировки ++++++++++++++++++++++++");
+        // Collections.sort(group.getStudents());
+        // for(Student stud: group)
+        //         {
+        //             System.out.println(stud);
+        //         }
+        //     }
+        
 
-
-
-		
         
         
-        StudentGroup group = new StudentGroup(listStud1);
-        for(Student stud: group)
-                {
-                    System.out.println(stud);
-                }
-                System.out.println("+++++++++++++++++ после сортировки ++++++++++++++++++++++++");
-        Collections.sort(group.getStudents());
-        for(Student stud: group)
-                {
-                    System.out.println(stud);
-                }
-            }
-        
-}
-        
-        
-        // System.out.println(group);
-        //  listStud.add(s1);
-        //  listStud.add(s2);
+       
 
         
     
