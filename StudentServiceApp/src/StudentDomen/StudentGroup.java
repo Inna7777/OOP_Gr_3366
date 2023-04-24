@@ -3,7 +3,7 @@ package StudentDomen;
 import java.util.Iterator;
 import java.util.List;
 /**
- * класс StudentGroup наследуем от User и подключаем метод сортировки (implements Comparable)
+ * класс StudentGroup - организация обработки данных(Itrerable <Student), подключаем метод сортировки (implements Comparable)
  */
 public class StudentGroup  implements Iterable<Student> , Comparable<StudentGroup> {
     private int course;

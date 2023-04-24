@@ -54,9 +54,9 @@ public class App {
             */
             StudentCourse course = new StudentCourse(listCourse);
             Collections.sort(course.getCourses()); // сортируем курсы по номеру
-            for (StudentGroup group : course.getCourses()) { // проходимся по каждой группе в каждом курсе
+            for (StudentGroup group :course.getCourses()) { // проходимся по каждой группе в каждом курсе
                 System.out.println("Course:" + group.getCourse() ); // выводим номер курса
-            
+           
                 Collections.sort(group.getStudents()); // сортируем студентов в группе 
                 for (Student student : group.getStudents()) { // проходимся по каждому студенту в группе
                     System.out.println(student); // выводим на печать группу и студента в ней
