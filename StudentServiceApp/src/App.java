@@ -37,11 +37,11 @@ public class App {
         List<Student> listStud3 = new ArrayList<Student>();
         listStud3.add(s7);
         List<Student> listStud4 = new ArrayList<Student>();
-        listStud3.add(s8);
-        listStud3.add(s9);
+        listStud4.add(s8);
+        listStud4.add(s9);
         List<Student> listStud5 = new ArrayList<Student>();
-        listStud3.add(s10);
-        listStud3.add(s11);
+        listStud5.add(s10);
+        listStud5.add(s11);
         
         List<StudentGroup> listCourse = new ArrayList<StudentGroup>();
         listCourse.add(new StudentGroup(listStud1, 2));
