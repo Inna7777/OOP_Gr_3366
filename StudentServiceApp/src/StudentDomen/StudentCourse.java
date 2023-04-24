@@ -26,7 +26,10 @@ public void setCourses(List<StudentGroup> courses) {
 	this.courses = courses;
 }
 
-
+	/**
+	 * подключение анонимного iterator -а для перебора в цикле for группы студентов
+	 *   
+	 * */
 @Override
 public Iterator<StudentGroup> iterator() {
 	return new Iterator<StudentGroup>() {
