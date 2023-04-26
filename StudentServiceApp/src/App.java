@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import Controllers.EmploeeController;
+import StudentDomen.Emploee;
 import StudentDomen.Student;
 import StudentDomen.StudentCourse;
 import StudentDomen.StudentGroup;
@@ -62,6 +65,10 @@ public class App {
                     System.out.println(student); // выводим на печать группу и студента в ней
                 }
             }
+
+            Emploee person1 = new Emploee("Иван", "Олежкин",55, 110);
+            EmploeeController contrEmp = new EmploeeController();
+            contrEmp.paySalary(person1);
         }
 
     }

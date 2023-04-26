@@ -10,9 +10,9 @@ public class User {
  * @param secondString
  * @param age
  */
-   public User(String firstName, String secondString, int age){
+   public User(String firstName, String secondName, int age){
     this.firstName =firstName;
-    this.secondName = secondString;
+    this.secondName = secondName;
     this.age = age;
    }
 /**
