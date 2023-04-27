@@ -3,6 +3,7 @@ package StudentService;
 import java.util.ArrayList;
 import java.util.List;
 
+import StudentDomen.AverageAgeCalculator;
 import StudentDomen.Emploee;
 import StudentDomen.UserComparator;
 
@@ -44,6 +45,10 @@ public class EmploeeService implements iUserService<Emploee> {
         return emps;
     }
 
+    static public  double calculateAverageAge(List<Emploee> emploees) {
+        AverageAgeCalculator<Emploee> calculator = new AverageAgeCalculator<>(emploees);
+        return calculator.calculateAverageAge();
+    }
     
-   
-}    
+ }  
+  

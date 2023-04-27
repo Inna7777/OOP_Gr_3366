@@ -3,6 +3,7 @@ package StudentService;
 import java.util.ArrayList;
 import java.util.List;
 
+import StudentDomen.AverageAgeCalculator;
 import StudentDomen.Teacher;
 import StudentDomen.UserComparator;
 
@@ -12,15 +13,16 @@ import StudentDomen.UserComparator;
 public class TeacherServis implements iUserService <Teacher>{
      private int count;
      private String academicDegree;
-     private List<Teacher> teachers;
-   
+     private static List<Teacher> teachers;
+     
+ 
     
     
     /**
      * 
      */
     public TeacherServis(){
-        this.teachers = new ArrayList<Teacher>();
+        TeacherServis.teachers = new ArrayList<Teacher>();
     }
 
     @Override
@@ -43,8 +45,10 @@ public class TeacherServis implements iUserService <Teacher>{
         return teach;
     }
 
-
+    static public  double calculateAverageAge(List<Teacher> teachers) {
+        AverageAgeCalculator<Teacher> calculator = new AverageAgeCalculator<>(teachers);
+        return calculator.calculateAverageAge();
+    }
   
-    
     
 }

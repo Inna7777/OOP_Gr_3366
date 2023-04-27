@@ -3,7 +3,9 @@ package StudentService;
 import java.util.ArrayList;
 import java.util.List;
 
+import StudentDomen.AverageAgeCalculator;
 import StudentDomen.Student;
+
 
 public class StudentService implements iUserService<Student>{
     private int count;
@@ -34,4 +36,8 @@ public class StudentService implements iUserService<Student>{
         return students;
     }
     
+    static public  double calculateAverageAge(List<Student> students) {
+        AverageAgeCalculator<Student> calculator = new AverageAgeCalculator<>(students);
+        return calculator.calculateAverageAge();
+    }
 }
