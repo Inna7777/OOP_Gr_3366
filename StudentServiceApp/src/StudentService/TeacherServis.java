@@ -13,7 +13,7 @@ import StudentDomen.UserComparator;
 public class TeacherServis implements iUserService <Teacher>{
      private int count;
      private String academicDegree;
-     private static List<Teacher> teachers;
+     private  List<Teacher> teachers;
      
  
     
@@ -22,7 +22,8 @@ public class TeacherServis implements iUserService <Teacher>{
      * 
      */
     public TeacherServis(){
-        TeacherServis.teachers = new ArrayList<Teacher>();
+        // TeacherServis.teachers = new ArrayList<Teacher>();
+        this.teachers = new ArrayList<Teacher>();
     }
 
     @Override

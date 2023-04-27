@@ -9,7 +9,7 @@ import StudentDomen.UserComparator;
 
 public class EmploeeService implements iUserService<Emploee> {
     private int count;
-    private List<Emploee> emploees;
+    private  List<Emploee> emploees;
 
     /*
      * конструктор для записи сотрудников
@@ -45,7 +45,7 @@ public class EmploeeService implements iUserService<Emploee> {
         return emps;
     }
 
-    static public  double calculateAverageAge(List<Emploee> emploees) {
+     static public  double calculateAverageAge(List<Emploee> emploees) {
         AverageAgeCalculator<Emploee> calculator = new AverageAgeCalculator<>(emploees);
         return calculator.calculateAverageAge();
     }

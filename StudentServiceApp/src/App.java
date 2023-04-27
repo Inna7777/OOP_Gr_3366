@@ -9,6 +9,7 @@ import StudentDomen.StudentCourse;
 import StudentDomen.StudentGroup;
 // import StudentDomen.User;
 import StudentDomen.Teacher;
+import StudentService.EmploeeService;
 import StudentService.StudentService;
 import StudentService.TeacherServis;
 
@@ -83,9 +84,9 @@ public class App {
             Double emplSalary[] = {12556.7,34543.0,10000.0};
             System.out.println(EmploeeController.mean(emplSalary));
             Teacher peson1 =new Teacher("Иван", "Иванов", 35, 46, "Математика");
-            Teacher peson2 =new Teacher("Петр", "Петров", 40, 34, "Физика");
+            Teacher peson2 =new Teacher("Петр", "Петров", 60, 34, "Физика");
             Teacher peson3 =new Teacher("Сидор", "Сидоров", 30, 35,"История");
-            List<Teacher> teachers = new ArrayList<>();
+            List<Teacher> teachers = new ArrayList<Teacher>();
             teachers.add(peson1);
             teachers.add(peson2);
             teachers.add(peson3);
@@ -102,14 +103,14 @@ public class App {
             double averageStudentAge = StudentService.calculateAverageAge(students);
             System.out.println("Средний возраст студентов: " + averageStudentAge);
 
-            Emploee pers1 = new Emploee("Иванов", "Олег",65, 110);
-            Emploee pers2 = new Emploee("Иванов", "Олег",50, 119);
+            Emploee pers1 = new Emploee("Шванов", "Олег",65, 110);
+            Emploee pers2 = new Emploee("Петров", "Олег",50, 119);
             Emploee pers3 = new Emploee("Иванов", "Олег",55, 118);
             List<Emploee> emploees = new ArrayList<Emploee>();
             emploees.add(pers1);
             emploees.add(pers2);
             emploees.add(pers3);
-            double averageEmploeeAge = EmployeeService.calculateAverageAge(emploees);
+            double averageEmploeeAge = EmploeeService.calculateAverageAge(emploees);
             System.out.println("Средний возраст сотрудников: " + averageEmploeeAge);
 
 
