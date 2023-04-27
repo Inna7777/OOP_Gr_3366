@@ -18,17 +18,17 @@ public class EmploeeController implements iUserControllers<Emploee> {
      * @param <T> защищенный метод выдачи данных(в данном случае зарплаты)
      * @param person
      */
-    static public <T extends Emploee> void paySalary(T person)
+     static public <T extends Emploee> void paySalary(T person)
     {
         System.out.println(((User) person).getFirstName()+" зп 10000");
     }
-    /**
-     *  метод подсчета средней зарплаты 
-     * @param <T>
-     * @param num
-     * @return
-     */
-    static public <T extends Number> Double mean(T[] num)
+    // /**
+    //  *  метод подсчета средней зарплаты 
+    //  * @param <T>
+    //  * @param num
+    //  * @return
+    //  */
+     static public <T extends Number> Double mean(T[] num)
     {
         double sum =0.0;
         for (int i = 0; i<num.length; i++)
@@ -38,5 +38,7 @@ public class EmploeeController implements iUserControllers<Emploee> {
         sum = sum/num.length;
         return sum;
     }
+
+    
     
 }

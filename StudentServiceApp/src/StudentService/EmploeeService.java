@@ -9,6 +9,10 @@ import StudentDomen.UserComparator;
 public class EmploeeService implements iUserService<Emploee> {
     private int count;
     private List<Emploee> emploees;
+
+    /*
+     * конструктор для записи сотрудников
+     */
     public  EmploeeService(){
         this.emploees = new ArrayList<Emploee>();
     }
@@ -28,7 +32,11 @@ public class EmploeeService implements iUserService<Emploee> {
     public List<Emploee> getAll() {
        return emploees;
     }
-
+    /**
+     * метод сортировки сотрудников
+     * @param numberGroup
+     * @return
+     */
     public List<Emploee> getSortedByFIOStudentGroup(int numberGroup)
     {
         List<Emploee> emps = new ArrayList<>(emploees);

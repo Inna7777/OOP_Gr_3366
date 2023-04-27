@@ -11,7 +11,7 @@ public class Teacher extends User {
    public Teacher(String firstName, String secondName, int age, int teacherID, String academicDegree) {
         super(firstName, secondName, age);
         this.teacherID = teacherID;
-        this.academicDegree = academicDegree;      
+        this.academicDegree = academicDegree ;      
         
     }
 public int getTeacherID() {
@@ -25,6 +25,8 @@ public void setTeacherID(int teacherID) {
 }
 public void setLevel(String academicDegree) {
     this.academicDegree = academicDegree;
+}
+public void add(Teacher person) {
 }
 
 

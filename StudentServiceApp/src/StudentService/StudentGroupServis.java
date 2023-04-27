@@ -28,13 +28,13 @@ public class StudentGroupServis {
     /**
      * cоздаем метод корпорататора добавления и сортировки  группы студентов
      */
-    public List<Student> getSortedByFIOStudentGroup(int numberGroup)
+    public List<Student> getSortedByFIOStudentGroup(int course)
     {
-        List<Student> students = new ArrayList<>(groups.get(numberGroup).getStudents());
+        List<Student> students = new ArrayList<>(groups.get(course).getStudents());
         students.sort(new UserComparator<Student>());
         return students;
     }
-
+    
 
 
 

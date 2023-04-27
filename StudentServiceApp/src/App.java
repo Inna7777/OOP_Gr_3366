@@ -8,6 +8,7 @@ import StudentDomen.Student;
 import StudentDomen.StudentCourse;
 import StudentDomen.StudentGroup;
 // import StudentDomen.User;
+import StudentDomen.Teacher;
 
 
 public class App {
@@ -65,10 +66,15 @@ public class App {
                     System.out.println(student); // выводим на печать группу и студента в ней
                 }
             }
-
+            //сотрудники 
             Emploee person1 = new Emploee("Иванов", "Олег",55, 110);
+            Student s12 = new Student("Sergey","Ivanov", 41, 180);
+            Teacher person1_2 = new Teacher("Кузьмин", "Борис",60, 0201, "PhD");
             // EmploeeController contrEmp = new EmploeeController();
+                     
             EmploeeController.paySalary(person1);
+            // EmploeeController.paySalary(person1_2);
+            
             Integer studHour[] = {124,45,34,124,67}; // часы студентов
             System.out.println(EmploeeController.mean(studHour));//вызываем метод - jenerik
 
