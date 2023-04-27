@@ -8,7 +8,11 @@ import StudentDomen.StudentGroup;
 import StudentDomen.UserComparator;
 
 public class StudentGroupServis {
-    private List<StudentGroup> groups;
+    private List<StudentGroup> groups;// список студенческих групп
+
+    /**
+     * Конструктор создания списка из групп
+     */
     public StudentGroupServis()
     {
         this.groups = new ArrayList<>();

@@ -7,24 +7,24 @@ package StudentDomen;
  */
 public class Teacher extends User {
    private int teacherID;
-   private String academicDegree;
-   public Teacher(String firstName, String secondName, int age, int teacherID, String level) {
+   private String academicDegree;// ученая степень
+   public Teacher(String firstName, String secondName, int age, int teacherID, String academicDegree) {
         super(firstName, secondName, age);
         this.teacherID = teacherID;
-        this.academicDegree = level;      
+        this.academicDegree = academicDegree;      
         
     }
 public int getTeacherID() {
     return teacherID;
 }
-public String getLevel() {
+public String getacademicDegree() {
     return academicDegree;
 }
 public void setTeacherID(int teacherID) {
     this.teacherID = teacherID;
 }
-public void setLevel(String level) {
-    this.academicDegree = level;
+public void setLevel(String academicDegree) {
+    this.academicDegree = academicDegree;
 }
 
 

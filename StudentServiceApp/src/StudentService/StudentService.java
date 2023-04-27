@@ -7,7 +7,11 @@ import StudentDomen.Student;
 
 public class StudentService implements iUserService<Student>{
     private int count;
-    private List<Student> students;
+    private List<Student> students;//список студентов
+
+    /**
+     * конструктор для записи студентов
+     */
     public StudentService(){
         this.students = new ArrayList<Student>();
         

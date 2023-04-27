@@ -2,7 +2,7 @@ package StudentService;
 
 import java.util.List;
 /**
- * интерфейс -generic для работы со всеми типами данных
+ * интерфейс -generic для работы со всеми типами  типами сотрудников
  */
 
 public interface iUserService<T> {

@@ -66,9 +66,15 @@ public class App {
                 }
             }
 
-            Emploee person1 = new Emploee("Иван", "Олежкин",55, 110);
-            EmploeeController contrEmp = new EmploeeController();
-            contrEmp.paySalary(person1);
+            Emploee person1 = new Emploee("Иванов", "Олег",55, 110);
+            // EmploeeController contrEmp = new EmploeeController();
+            EmploeeController.paySalary(person1);
+            Integer studHour[] = {124,45,34,124,67}; // часы студентов
+            System.out.println(EmploeeController.mean(studHour));//вызываем метод - jenerik
+
+            Double emplSalary[] = {12556.7,34543.0,10000.0};
+            System.out.println(EmploeeController.mean(emplSalary));
+
         }
 
     }

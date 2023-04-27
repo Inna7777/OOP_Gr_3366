@@ -17,11 +17,17 @@ public class Emploee extends User {
         this.empId = empId;
       
     }
-
+    /**
+     * возвращаем Id сотрудника
+     * @return
+     */
     public int getEmpId() {
         return empId;
     }
-
+    /**
+     * определяем(задаем) id студента
+     * @param empId
+     */
     public void setEmpId(int empId) {
         this.empId = empId;
     }
