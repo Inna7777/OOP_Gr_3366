@@ -17,7 +17,7 @@ public class Teacher extends User {
 public int getTeacherID() {
     return teacherID;
 }
-public String getacademicDegree() {
+public String getAcademicDegree() {
     return academicDegree;
 }
 public void setTeacherID(int teacherID) {

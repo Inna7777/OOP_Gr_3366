@@ -13,7 +13,7 @@ import StudentDomen.UserComparator;
 public class TeacherServis implements iUserService <Teacher>{
      private int count;
      private String academicDegree;
-     private  List<Teacher> teachers;
+     private static  List<Teacher> teachers;
      
  
     
@@ -23,7 +23,7 @@ public class TeacherServis implements iUserService <Teacher>{
      */
     public TeacherServis(){
         // TeacherServis.teachers = new ArrayList<Teacher>();
-        this.teachers = new ArrayList<Teacher>();
+        TeacherServis.teachers = new ArrayList<Teacher>();
     }
 
     @Override
@@ -45,7 +45,12 @@ public class TeacherServis implements iUserService <Teacher>{
         teach.sort(new UserComparator<Teacher>());
         return teach;
     }
-
+    /**
+     * **
+     * вызов метода определения среднего возраста
+     * @param teachers
+     * @return
+     */
     static public  double calculateAverageAge(List<Teacher> teachers) {
         AverageAgeCalculator<Teacher> calculator = new AverageAgeCalculator<>(teachers);
         return calculator.calculateAverageAge();

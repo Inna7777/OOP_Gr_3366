@@ -44,7 +44,11 @@ public class EmploeeService implements iUserService<Emploee> {
         emps.sort(new UserComparator<Emploee>());
         return emps;
     }
-
+    /**
+     * вызов метода определения среднего возраста
+     * @param emploees
+     * @return
+     */
      static public  double calculateAverageAge(List<Emploee> emploees) {
         AverageAgeCalculator<Emploee> calculator = new AverageAgeCalculator<>(emploees);
         return calculator.calculateAverageAge();

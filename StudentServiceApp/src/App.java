@@ -83,19 +83,25 @@ public class App {
 
             Double emplSalary[] = {12556.7,34543.0,10000.0};
             System.out.println(EmploeeController.mean(emplSalary));
-            Teacher peson1 =new Teacher("Иван", "Иванов", 35, 46, "Математика");
-            Teacher peson2 =new Teacher("Петр", "Петров", 60, 34, "Физика");
-            Teacher peson3 =new Teacher("Сидор", "Сидоров", 30, 35,"История");
+            Teacher peson1 =new Teacher("Иван", "Иванов", 45, 46, "Doctoral");
+            Teacher peson2 =new Teacher("Петр", "Петров", 60, 34, "Doctoral");
+            Teacher peson3 =new Teacher("Сидор", "Сидоров", 30, 35,"Aspirant");
+            /**
+             * создаем список учителей
+             */            
             List<Teacher> teachers = new ArrayList<Teacher>();
             teachers.add(peson1);
             teachers.add(peson2);
             teachers.add(peson3);
-            double averageTeacherAge = TeacherServis.calculateAverageAge(teachers);
+            double averageTeacherAge = TeacherServis.calculateAverageAge(teachers);// вызываем метод подсчета среднего возраста
             System.out.println("Средний возраст преподавателей: " + averageTeacherAge);
 
             Student s14 = new Student("Sergey","Ivanov",33 , 180);
             Student s20 = new Student("Oleg","Vetrov", 24, 111);
             Student s30 = new Student("Dasha","Rideeva", 24, 123);
+            /**
+             * создаем список студентов
+             */  
             List<Student> students = new ArrayList<Student>();
             students.add(s14);
             students.add(s20);
@@ -105,17 +111,26 @@ public class App {
 
             Emploee pers1 = new Emploee("Шванов", "Олег",65, 110);
             Emploee pers2 = new Emploee("Петров", "Олег",50, 119);
-            Emploee pers3 = new Emploee("Иванов", "Олег",55, 118);
+            Emploee pers3 = new Emploee("Иванов", "Олег",40, 118);
+            /**
+             * создаем список сотрудников
+             */  
             List<Emploee> emploees = new ArrayList<Emploee>();
             emploees.add(pers1);
             emploees.add(pers2);
             emploees.add(pers3);
             double averageEmploeeAge = EmploeeService.calculateAverageAge(emploees);
             System.out.println("Средний возраст сотрудников: " + averageEmploeeAge);
-
+            
+           
 
     }
+
+       
 }
+
+        
+
     
 
         
