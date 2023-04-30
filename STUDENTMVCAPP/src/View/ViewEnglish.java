@@ -3,12 +3,12 @@ package View;
 import java.util.List;
 import java.util.Scanner;
 
-import Controller.iGetView;
+
 import Controller.iGetViewEngl;
 import Model.Student;
 
 public class ViewEnglish implements iGetViewEngl {
-    public void printAllStudent(List<Student> students)
+        public void printAllStudent(List<Student> students)
     {
         System.out.println("---------Displaying a list of students------------");
         for(Student person: students)
@@ -24,6 +24,12 @@ public class ViewEnglish implements iGetViewEngl {
         Scanner in = new Scanner(System.in);
         System.out.print(message);
         return in.nextLine();
+    }
+    @Override
+    public long promptLong(String message) {
+        Scanner id = new Scanner(System.in);
+        System.out.print(message);
+        return Long.parseLong(id.nextLine());
     }
 }
 

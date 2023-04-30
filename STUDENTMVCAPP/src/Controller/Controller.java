@@ -16,6 +16,7 @@ public class Controller {
     // подключаем к контроллеру интерфейсы
     private iGetViewEngl view;
     private  iGetModel model;
+    
 
 /**
  * Создаем конструктор Controller-а
@@ -64,7 +65,7 @@ public void updateView()
     // view.printAllStudent(model.getAllStudents());
     }
 
-    /** метод -сценария работы програмь */
+    /** метод -сценария работы программы */
 
     public void run()
     {
@@ -74,6 +75,7 @@ public void updateView()
         {
             String command = view.prompt("Введите команду:");
             com = Commands.valueOf(command.toUpperCase());
+            long id;
             switch(com)
             {
                 case EXIT:
@@ -84,9 +86,34 @@ public void updateView()
                 getAllStudents();
                 updateView();
                 break;
+                case DELETE:
+                id = view.promptLong("Введите id студента для удаления:");// запрашиваем у пользователя ID студента для удаления
+                deleteStudentById(id);// вызываем метод deleteStudentById с полученным ID в качестве аргумента
+                updateView();// обновляем представление
+                break;// завершаем выполнение команды "удалить"
+                default:// в случае любой другой команды
+                System.out.println("Неверная команда");// выводим сообщение об ошибке
+                break;// завершаем выполнение команды
             }
+            
         }
     }
 
+    /** метод удаления студента по id */
+    public void deleteStudentById(long id) {
+        getAllStudents();
+        for (Student student : students) {
+          if (student.getStudentId() == id) {
+            students.remove(student);
+            break;
+          }
+        }
+      } 
+    
+   
+ }
+        
+    
+        
+    
 
-}

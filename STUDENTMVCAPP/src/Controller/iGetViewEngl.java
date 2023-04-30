@@ -6,4 +6,7 @@ import Model.Student;
 public interface iGetViewEngl {
     void printAllStudent(List<Student> students);
     String prompt(String message);
+    long promptLong(String string);
+    
+    
 }

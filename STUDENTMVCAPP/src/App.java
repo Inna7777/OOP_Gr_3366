@@ -25,7 +25,8 @@ public class App {
         Student s4 = new Student("Sergey","Semenov", 24, 234);
         Student s5 = new Student("Michail","Petrov", 24, 151);
         Student s6 = new Student("Lena","Medvedeva",25, 723);
-                students.add(s1);
+        
+        students.add(s1);
         students.add(s2);
         students.add(s3);
         students.add(s4);
