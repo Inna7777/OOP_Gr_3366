@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="399386f9-01c9-4c2f-bd33-a8fd9dbd59f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/StudentServiceApp/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/StudentServiceApp/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudentServiceApp/src/StudentDomen/StudentGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/StudentServiceApp/src/StudentDomen/StudentGroup.java" afterDir="false" />
-    </list>
+    <list default="true" id="399386f9-01c9-4c2f-bd33-a8fd9dbd59f0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
