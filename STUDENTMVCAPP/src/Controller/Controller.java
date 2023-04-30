@@ -14,7 +14,7 @@ import View.View;
 public class Controller {
     private  List<Student> students;
     // подключаем к контроллеру интерфейсы
-    private iGetView view;
+    private iGetViewEngl view;
     private  iGetModel model;
 
 /**
@@ -22,7 +22,7 @@ public class Controller {
  * @param view
  * @param model
  */
-public Controller(iGetView view, iGetModel model){
+public Controller(iGetViewEngl view, iGetModel model){
     this.view = view;
     this.model = model;
     this.students =new ArrayList<Student>();

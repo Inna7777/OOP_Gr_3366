@@ -5,10 +5,12 @@ import java.util.List;
 import Controller.Controller;
 import Controller.iGetModel;
 import Controller.iGetView;
+import Controller.iGetViewEngl;
 import Model.FileRepo;
 import Model.Model;
 import Model.Student;
 import View.View;
+import View.ViewEnglish;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -60,8 +62,8 @@ public class App {
         /**
          * создаем View для отображения
          */
-        iGetView view =new View();
-        Controller control = new Controller(view, modelFileRepo);
+        iGetViewEngl view = new ViewEnglish();
+        Controller control = new Controller(view, model);
         control.run();
         // control.updateView();
     }
