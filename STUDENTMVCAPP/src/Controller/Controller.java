@@ -13,15 +13,16 @@ import View.View;
  */
 public class Controller {
     private  List<Student> students;
-    private View  view;
-    private  Model model;
+    // подключаем к контроллеру интерфейсы
+    private iGetView view;
+    private  iGetModel model;
 
 /**
  * Создаем конструктор Controller-а
  * @param view
  * @param model
  */
-public Controller(View view, Model model){
+public Controller(iGetView view, iGetModel model){
     this.view = view;
     this.model = model;
     this.students =new ArrayList<Student>();
@@ -61,8 +62,28 @@ public void updateView()
     }
     //MVS
     // view.printAllStudent(model.getAllStudents());
-}
-
+    }
+    public void run()
+    {
+        Commands com = Commands.NONE;
+        boolean getNewIteration =true;
+        while(getNewIteration)
+        {
+            String command = view.prompt("Введите команду:");
+            com = Commands.valueOf(command.toUpperCase());
+            switch(com)
+            {
+                case EXIT:
+                getNewIteration=false;
+                System.out.println("Выход из программы");
+                break;
+                case LIST:
+                getAllStudents();
+                updateView();
+                break;
+            }
+        }
+    }
 
 
 }

@@ -5,7 +5,9 @@ package Model;
 
 import java.util.List;
 
-public class Model {
+import Controller.iGetModel;
+
+public class Model implements iGetModel{//подключаем интерфейс
      private List<Student> students;
 /**
  * создаем контсруктор для создания списка студентов

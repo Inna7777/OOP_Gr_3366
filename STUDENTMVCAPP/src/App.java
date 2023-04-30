@@ -1,7 +1,11 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import Controller.Controller;
+import Controller.iGetModel;
+import Controller.iGetView;
+import Model.FileRepo;
 import Model.Model;
 import Model.Student;
 import View.View;
@@ -26,18 +30,39 @@ public class App {
         students.add(s5);
         students.add(s5);
         students.add(s6);
+
+        FileRepo fileRepo = new FileRepo("StudentDb.txt");// создаем файл
+            // for(Student pers : students)
+            //         {
+            //             fileRepo.addStudent(pers);
+            //         }
+            //         fileRepo.saveAllStudentToFile();
+        //  /**
+        //  * создали модель -список из студентовЭта модель работает с памятью конструктора.
+        //  */
+        // Model model = new Model(students);
+        // /**
+        //  * создаем View для отображения
+        //  */
+        // View view =new View();
+        // /*
+        //  *создаем Controller  и передаем ему View и Model
+        //  */
+        // Controller control = new Controller(view, model);
+        // control.updateView();
+               
         /**
-         * создали модель -список из студентов
+         * создали модель -список из студентов. Эта конструкция работает с файлом  через интерфейс (архитектурная граница)
          */
-        Model model = new Model(students);
+        iGetModel model = new Model(students);
+        iGetModel modelFileRepo = fileRepo;
+        
         /**
          * создаем View для отображения
          */
-        View view =new View();
-        /*
-         *создаем Controller  и передаем ему View и Model
-         */
-        Controller control = new Controller(view, model);
-        control.updateView();
+        iGetView view =new View();
+        Controller control = new Controller(view, modelFileRepo);
+        control.run();
+        // control.updateView();
     }
 }
