@@ -1,7 +1,25 @@
 package Model;
+/**
+ * создаем модель- список студентов
+ */
+
+import java.util.List;
 
 public class Model {
      private List<Student> students;
-
-     public Model
+/**
+ * создаем контсруктор для создания списка студентов
+ * @param students
+ */
+     public Model(List<Student> students) {
+          this.students = students;
+     }
+/**
+ * мотод предоставления данный о студентах
+ */
+     public List<Student> getAllStudents()
+     {
+          return students;
+     }
+     
 }

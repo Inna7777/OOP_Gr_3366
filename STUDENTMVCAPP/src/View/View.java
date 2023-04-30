@@ -1,9 +1,18 @@
 package View;
+import java.util.List;
+
 import Model.Student;
+
 public class View {
-    public void printAllStudent(List<Student> students)
+  /**
+ * создаем простой метод -печати студентов
+ */  
+public void printAllStudent(List<Student> students)
     {
-        for(S)
+        for(Student person: students)
+        {
+            System.out.println(person);
+        }
     }
     
 }
