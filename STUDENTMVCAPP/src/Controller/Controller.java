@@ -63,6 +63,9 @@ public void updateView()
     //MVS
     // view.printAllStudent(model.getAllStudents());
     }
+
+    /** метод -сценария работы програмь */
+
     public void run()
     {
         Commands com = Commands.NONE;
