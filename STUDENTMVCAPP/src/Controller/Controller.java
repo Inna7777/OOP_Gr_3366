@@ -74,7 +74,12 @@ public void updateView()
         while(getNewIteration)
         {
             String command = view.prompt("Введите команду:");
-            com = Commands.valueOf(command.toUpperCase());
+            try{
+                com = Commands.valueOf(command.toUpperCase());
+            }catch(Exception e)
+            {
+                com = Commands.UPDATE;
+            }
             long id;
             switch(com)
             {
