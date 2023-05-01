@@ -106,11 +106,11 @@ public void updateView()
 
     /** метод удаления студента по id */
     public void deleteStudentById(long id) {
-        getAllStudents();
-        for (Student student : students) {
-          if (student.getStudentId() == id) {
-            students.remove(student);
-            break;
+        getAllStudents();//вызываем список студентов
+        for (Student student : students) {//перебираем список студентов
+          if (student.getStudentId() == id) {//если найден заданный id
+            students.remove(student);//удаляем
+            break;//завершаем
           }
         }
       } 
