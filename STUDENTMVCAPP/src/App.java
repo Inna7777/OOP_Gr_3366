@@ -1,13 +1,16 @@
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import Controller.Controller;
 import Controller.iGetModel;
+import Controller.iGetModelHash;
 import Controller.iGetView;
 import Controller.iGetViewEngl;
 import Model.FileRepo;
 import Model.Model;
+import Model.ModelHash;
 import Model.Student;
 import View.View;
 import View.ViewEnglish;
@@ -53,19 +56,34 @@ public class App {
         //  */
         // Controller control = new Controller(view, model);
         // control.updateView();
-               
+            Student s8 = new Student("Mihail","Steganov", 41, 188);
+            Student s9 = new Student("Roman","Petrov", 24, 112);
+            Student s10 = new Student("Masha","Riga", 24, 122);
+            Student s11 = new Student("Sergey","Semenov", 24, 235);
+            HashMap<Long, Student> students2 = new HashMap<Long, Student>();
+            students2.put(s8.getStudentId(), s8);
+            students2.put(s9.getStudentId(), s9);
+            students2.put(s10.getStudentId(), s10);
+            students2.put(s11.getStudentId(), s11);
+            
         /**
          * создали модель -список из студентов. Эта конструкция работает с файлом  через интерфейс (архитектурная граница)
          */
         iGetModel model = new Model(students);
         iGetModel modelFileRepo = fileRepo;
+        iGetModelHash modelHash = new ModelHash(students2);
         
         /**
          * создаем View для отображения
          */
         iGetViewEngl view = new ViewEnglish();
-        Controller control = new Controller(view, model);
+        
+        Controller control = new Controller(view, model, modelHash);
         control.run();
         // control.updateView();
+
+        
     }
-}
+
+            
+    }

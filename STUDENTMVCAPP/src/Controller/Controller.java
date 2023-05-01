@@ -1,6 +1,7 @@
 package Controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 // import javax.jws.WebParam.Mode;
@@ -13,9 +14,11 @@ import View.View;
  */
 public class Controller {
     private  List<Student> students;
+    private HashMap<Long, Student> students2;
     // подключаем к контроллеру интерфейсы
     private iGetViewEngl view;
     private  iGetModel model;
+    private iGetModelHash modelHash;
     
 
 /**
@@ -23,10 +26,12 @@ public class Controller {
  * @param view
  * @param model
  */
-public Controller(iGetViewEngl view, iGetModel model){
+public Controller(iGetViewEngl view, iGetModel model, iGetModelHash modelHash){
     this.view = view;
     this.model = model;
+    this.modelHash = modelHash;
     this.students =new ArrayList<Student>();
+    this.students2 = new HashMap<Long, Student>();
 }
 /**
  * создаем два метода для реализации модели MVP
@@ -45,7 +50,24 @@ public boolean testData()
     return false;
    }
 }
-
+/**
+ * создаем два метода для реализации модели MVP
+ */ // берет из модели и кладет в внутрь контроллера
+ public void getAllStudentsHash() 
+ {
+     students2 = modelHash.getAllStudentsHash();
+ }
+ public boolean testData2()
+ {
+    if(students2.size()>0)
+    {
+     return true;
+    }
+    else{
+     return false;
+    }
+ }
+ 
 /**
  * создаем метод, котрый свяжет View and Model 
  * метод берет модель и запрашивает всех студентов
@@ -64,7 +86,21 @@ public void updateView()
     //MVS
     // view.printAllStudent(model.getAllStudents());
     }
-
+    public void updateViewMap()
+    {
+        //MVP
+        getAllStudentsHash();// загрузили данные к себе в память
+        if(testData2()) // проверили полученные данные
+        {
+            view.printAllStudentMap(students2); // отправляем View для отображения
+        }
+        else{
+            System.out.println("список студентов пуст!");
+        }
+        //MVS
+        // view.printAllStudent(model.getAllStudents());
+        }
+    
     /** метод -сценария работы программы */
 
     public void run()

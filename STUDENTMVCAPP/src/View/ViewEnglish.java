@@ -1,6 +1,8 @@
 package View;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 
@@ -17,9 +19,22 @@ public class ViewEnglish implements iGetViewEngl {
         }
         System.out.println("---------End of list------------");
     }
+
+
+    
+    public void printAllStudentMap(HashMap<Long, Student> students2) {
+        System.out.println("---------Displaying a list of students------------");
+        for(Map.Entry<Long, Student> entry : students2.entrySet()) {
+            System.out.println(entry.getValue());
+        }
+        System.out.println("---------End of list------------");
+    }
+    // /**
     /**
      *  этот метод считывает команды с консоли и добавляем этод метод в интерфейс View
      */
+
+
     public String prompt(String message) {
         Scanner in = new Scanner(System.in);
         System.out.print(message);
@@ -31,6 +46,10 @@ public class ViewEnglish implements iGetViewEngl {
         System.out.print(message);
         return Long.parseLong(id.nextLine());
     }
+
+
+
+   
 }
 
 
