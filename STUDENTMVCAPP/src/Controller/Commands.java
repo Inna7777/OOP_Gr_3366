@@ -9,5 +9,7 @@ public enum Commands {
     UPDATE,
     LIST,
     DELETE,
-    EXIT
+    EXIT,
+    LIST1,
+    LIST2
 }

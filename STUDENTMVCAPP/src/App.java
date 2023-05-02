@@ -79,7 +79,7 @@ public class App {
         iGetViewEngl view = new ViewEnglish();
         
         Controller control = new Controller(view, model, modelHash);
-        control.run();
+        control.choice();
         // control.updateView();
 
         
