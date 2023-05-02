@@ -8,7 +8,9 @@ import java.util.Scanner;
 
 import Controller.iGetViewEngl;
 import Model.Student;
-
+/**
+ * создаем  метод -печати студентов
+ */  
 public class ViewEnglish implements iGetViewEngl {
         public void printAllStudent(List<Student> students)
     {
@@ -20,7 +22,9 @@ public class ViewEnglish implements iGetViewEngl {
         System.out.println("---------End of list------------");
     }
 
-
+/**
+ * создаем  метод -печати студентов из HashMap
+ */ 
     
     public void printAllStudentMap(HashMap<Long, Student> students2) {
         System.out.println("---------Displaying a list of students------------");
