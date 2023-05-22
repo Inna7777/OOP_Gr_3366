@@ -1,6 +1,7 @@
 package GeometricFigures;
-
-public class Square extends Figure {
+// класс квадрат который  может наследовать  метод расчета площади родительского класса Figure 
+//или классом наследником Rectangle
+public class Square extends Rectangle {
     private int side;
 
     public void setSide(int side) {

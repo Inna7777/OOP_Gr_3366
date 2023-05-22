@@ -1,5 +1,5 @@
 package GeometricFigures;
-
+// класс прямоугольник который наследует метод родительского класса Figure
 public class Rectangle extends Figure {
     private int width;
     private int height;
