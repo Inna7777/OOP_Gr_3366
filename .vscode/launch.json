@@ -4,7 +4,13 @@
     // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "calculator.Main",
+            "projectName": "OOP_Gr_3366_b04fb3e4"
+        },
         {
             "type": "java",
             "name": "Current File",

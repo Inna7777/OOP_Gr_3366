@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399386f9-01c9-4c2f-bd33-a8fd9dbd59f0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/bin/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/bin/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/bin/Controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/bin/Controller/iGetViewEngl.class" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/bin/Controller/iGetViewEngl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/bin/View/ViewEnglish.class" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/bin/View/ViewEnglish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/src/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/src/Controller/iGetViewEngl.java" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/src/Controller/iGetViewEngl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STUDENTMVCAPP/src/View/ViewEnglish.java" beforeDir="false" afterPath="$PROJECT_DIR$/STUDENTMVCAPP/src/View/ViewEnglish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
