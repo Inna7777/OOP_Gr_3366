@@ -32,7 +32,7 @@ public iComplexNumber readNum2() {
 }
 public iOperation run() {
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Choose operation (+, *, /): ");
+    System.out.print("Выберите операцию с числами (+, *, /): ");
     String input = scanner.nextLine();
     switch (input) {
         case "+":
@@ -42,7 +42,7 @@ public iOperation run() {
         case "/":
             return new Division();
         default:
-            System.out.println("Invalid operation.");
+            System.out.println("Неправильная операция");
             return null;
     }
 }
