@@ -10,7 +10,7 @@ import Numbers.RealNumber;
 public class ViewCalculator {
 
 public void displayResult(iComplexNumber result) {
-    System.out.println("Result: " + result.toString());
+    System.out.println("Результат: " + result.toString());
 }
 
 public iComplexNumber readNum1() {
