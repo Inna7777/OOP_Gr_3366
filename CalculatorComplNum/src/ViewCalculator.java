@@ -13,15 +13,23 @@ public void displayResult(iComplexNumber result) {
     System.out.println("Result: " + result.toString());
 }
 
-public iComplexNumber readNumber() {
+public iComplexNumber readNum1() {
+    System.out.println("===== Калькулятор комплексных чисел ====");
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Введите действительную часть: ");
+    System.out.print("Введите действительную часть первого: ");
     double realPart = scanner.nextDouble();
-    System.out.print("Imaginary part: ");
+    System.out.print("Введите мнимую  часть первого:: ");
     double imaginaryPart = scanner.nextDouble();
     return new RealNumber(realPart, imaginaryPart);
 }
-
+public iComplexNumber readNum2() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Введите действительную часть второго числа: ");
+    double realPart = scanner.nextDouble();
+    System.out.print("Введите мнимую  часть второго числа:: ");
+    double imaginaryPart = scanner.nextDouble();
+    return new RealNumber(realPart, imaginaryPart);
+}
 public iOperation run() {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Choose operation (+, *, /): ");
