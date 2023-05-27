@@ -2,7 +2,7 @@ package CalculatorServise;
 import Numbers.RealNumber;
 import Controller.iComplexNumber;
 import Controller.iOperation;
-
+// класс для создания метода деления
 public class Multiplication implements iOperation {
 
     @Override

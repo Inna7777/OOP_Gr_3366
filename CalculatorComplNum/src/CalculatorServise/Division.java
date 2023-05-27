@@ -5,7 +5,7 @@ import Controller.iComplexNumber;
 import Controller.iOperation;
 import Numbers.RealNumber;
 
-
+// класс для создания метода деления
 public class Division implements iOperation{
 
     @Override
